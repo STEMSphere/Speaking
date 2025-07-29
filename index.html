@@ -58,17 +58,20 @@
       padding: 2em 1em 3em;
     }
 
-    /* 🔥 Blue-Pink Glow */
+    /* 🎆 Split Glow — Blue Left / Pink Right */
     .electric-frame {
       position: relative;
       padding: 10px;
       border-radius: 12px;
       margin: 2em auto;
       background-color: #000;
+
       box-shadow:
-        0 0 10px #00bfff,
-        0 0 16px #ff1493,
-        0 0 22px #ff69b4;
+        -10px 0 18px #00bfff,    /* Left side glow: electric blue */
+        10px 0 18px #ff1493,     /* Right side glow: hot pink */
+        0 0 8px #00bfff,         /* Base blue glow */
+        0 0 8px #ff1493;         /* Base pink glow */
+
       animation: flicker 1.5s infinite alternate;
       max-width: 800px;
     }
@@ -76,15 +79,17 @@
     @keyframes flicker {
       0% {
         box-shadow:
-          0 0 8px #1e90ff,
-          0 0 12px #ff1493,
-          0 0 18px #ff69b4;
+          -10px 0 12px #1e90ff,
+          10px 0 12px #ff69b4,
+          0 0 6px #00bfff,
+          0 0 6px #ff1493;
       }
       100% {
         box-shadow:
-          0 0 12px #00bfff,
-          0 0 18px #ff69b4,
-          0 0 24px #ff1493;
+          -10px 0 18px #00bfff,
+          10px 0 18px #ff1493,
+          0 0 8px #00bfff,
+          0 0 8px #ff1493;
       }
     }
 
