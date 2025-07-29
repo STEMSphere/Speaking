@@ -26,8 +26,7 @@
     .title-group span {
       font-size: 2.8em;
       font-weight: 700;
-      color: #FFDD00; /* Electric yellow restored */
-      text-shadow: 0 0 8px #ff1493, 0 0 8px #00bfff;
+      color: #FFDD00; /* Vibrant yellow */
       display: block;
       letter-spacing: 1px;
       line-height: 1.2em;
@@ -65,13 +64,10 @@
       border-radius: 12px;
       margin: 2em auto;
       background-color: #000;
-
       box-shadow:
-        -10px 0 18px #00bfff,
-        10px 0 18px #ff1493,
-        0 0 8px #00bfff,
-        0 0 8px #ff1493;
-
+        0 0 10px #fdf200,
+        0 0 16px #ffe600,
+        0 0 22px #fff000;
       animation: flicker 1.5s infinite alternate;
       max-width: 800px;
     }
@@ -79,17 +75,15 @@
     @keyframes flicker {
       0% {
         box-shadow:
-          -10px 0 12px #1e90ff,
-          10px 0 12px #ff69b4,
-          0 0 6px #00bfff,
-          0 0 6px #ff1493;
+          0 0 8px #ffeb3b,
+          0 0 12px #fdf200,
+          0 0 18px #ffe600;
       }
       100% {
         box-shadow:
-          -10px 0 18px #00bfff,
-          10px 0 18px #ff1493,
-          0 0 8px #00bfff,
-          0 0 8px #ff1493;
+          0 0 12px #fdf200,
+          0 0 18px #fff000,
+          0 0 24px #ffeb3b;
       }
     }
 
