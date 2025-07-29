@@ -1,57 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Speak Fluently – STEMSphere Academy</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Not Just English — Speak with Confidence</title>
   <style>
     body {
-      font-family: sans-serif;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000000;
+      color: #fff;
       text-align: center;
-      padding: 2em;
-      background: #f8f9fa;
     }
-    h1 {
-      color: #2c3e50;
+
+    header {
+      padding: 3em 1em 1em;
     }
-    p {
-      font-size: 1.2em;
-      margin-top: 1em;
+
+    .title-group {
+      display: inline-block;
+      line-height: 1.4em;
+      margin-bottom: 0.5em;
     }
-    iframe {
-      margin: 2em 0;
+
+    .title-group span {
+      font-size: 2.8em;
+      font-weight: 700;
+      color: #FFDD00;
+      display: block;
+      letter-spacing: 1px;
+      line-height: 1.4em;
+    }
+
+    h2 {
+      font-size: 1.4em;
+      color: #ccc;
+      font-weight: normal;
+      margin-top: 0.8em;
+    }
+
+    @media (max-width: 600px) {
+      .title-group span {
+        font-size: 2em;
+      }
+      h2 {
+        font-size: 1.2em;
+      }
+    }
+
+    main {
+      max-width: 850px;
+      margin: auto;
+      padding: 2em 1em 3em;
+    }
+
+    /* ⚡ Gentle Glow Frame */
+    .electric-frame {
+      position: relative;
+      padding: 10px;
+      border-radius: 12px;
+      margin: 2em auto;
+      background-color: #000;
+      box-shadow:
+        0 0 10px #fdf200,
+        0 0 16px #ffe600,
+        0 0 22px #fff000;
+      animation: flicker 1.5s infinite alternate;
+      max-width: 800px;
+    }
+
+    @keyframes flicker {
+      0% {
+        box-shadow:
+          0 0 8px #ffeb3b,
+          0 0 12px #fdf200,
+          0 0 18px #ffe600;
+      }
+      100% {
+        box-shadow:
+          0 0 12px #fdf200,
+          0 0 18px #fff000,
+          0 0 24px #ffeb3b;
+      }
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
       border: none;
     }
-    a.button {
-      text-decoration: none;
-      padding: 0.75em 1.5em;
-      background-color: #e67e22;
-      color: white;
-      border-radius: 4px;
-      display: inline-block;
-      margin-top: 1.5em;
+
+    .script {
+      text-align: left;
+      font-size: 1.1em;
+      line-height: 1.6em;
+      color: #ccc;
+      max-width: 800px;
+      margin: auto;
+      padding: 2em 1em;
     }
+
     footer {
-      font-size: 0.8em;
-      color: #666;
-      margin-top: 3em;
-      text-align: center;
+      font-size: 0.85em;
+      color: #bbb;
+      padding: 2em 1em;
+      border-top: 1px solid #333;
     }
   </style>
 </head>
 <body>
-  <h1>Speak Fluently with STEMSphere</h1>
-  <p>Confidence. Clarity. Connection. Discover the art of impactful communication.</p>
+  <header>
+    <div class="title-group">
+      <span>Not Just English.</span>
+      <span>Speak with Confidence.</span>
+    </div>
+    <h2>Speaking First → Confidence Always → Real Transformation</h2>
+  </header>
 
-  <!-- ✅ Embedded YouTube video -->
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+  <main>
+    <div class="electric-frame">
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+          title="STEMSphere Public Speaking Course" allowfullscreen></iframe>
+      </div>
+    </div>
 
-  <!-- ✅ Redirect button -->
-  <p>
-    <a href="https://stemsphereacademy.thinkific.com" class="button">Start Speaking Now</a>
-  </p>
+    <div class="script">
+      <p><strong>Interviewer:</strong> Why do most kids study English for years and still struggle to speak?</p>
+      <p><strong>Me:</strong> Because they learn with books, not with their voice. They memorize grammar, vocabulary, and rules. But real English happens when we speak it.</p>
+      <p><strong>Interviewer:</strong> So speaking is not just part of learning — it’s the best way?</p>
+      <p><strong>Me:</strong> Yes. The fastest way to learn English is to speak it. Not just in class — but in front of people. Public speaking trains confidence, expression, and clear thinking.</p>
+      <p><strong>Interviewer:</strong> Is public speaking okay for beginners?</p>
+      <p><strong>Me:</strong> Of course. We start small. First, short sentences. Then storytelling. Students learn how to speak with emotion, make eye contact, and feel proud of their words.</p>
+      <p><strong>Interviewer:</strong> That sounds very different.</p>
+      <p><strong>Me:</strong> It is. At STEMSphere, we teach English by speaking. Our students don’t sit quietly — they stand and speak clearly. They stop thinking in their language and start thinking in English.</p>
+      <p><strong>Interviewer:</strong> Can you show an example?</p>
+      <p><strong>Me:</strong> Sure. (Here you could use the apple example — show how tone changes the meaning.)</p>
+      <p><strong>Interviewer:</strong> That’s powerful.</p>
+      <p><strong>Me:</strong> It works. Not just for English — but also for science, math, and coding. We build strong speakers who can explain ideas anywhere.</p>
+      <p><strong>Interviewer:</strong> But you’re a STEM program. Why English?</p>
+      <p><strong>Me:</strong> Because every STEM student needs to speak well — for presentations, interviews, and leadership. Public speaking helps students use English in real life.</p>
+      <p><strong>Interviewer:</strong> And this helps fast?</p>
+      <p><strong>Me:</strong> Yes. Parents say they see change after 2–3 weeks. Students speak better, think faster, and feel confident.</p>
+      <p><strong>Interviewer:</strong> What makes your course special?</p>
+      <p><strong>Me:</strong> We teach with real coaches — not just videos. Students can study on their own, join group classes, or get 1-on-1 help. We support families across Asia.</p>
+      <p><strong>Interviewer:</strong> That apple example still sticks with me.</p>
+      <p><strong>Me:</strong> That’s why we teach this way. Our training is simple, clear, and fun. Students don’t read scripts — they speak from their heart.</p>
+      <hr />
+      <p><strong>Me:</strong> If you’re a parent watching this and thinking:<br>
+      “My child knows English but doesn’t speak with confidence…”<br>
+      This course is for you.</p>
+    </div>
+  </main>
 
   <footer>
-    © 2025 STEMSphere Academy. All rights reserved. No reproduction allowed without permission.
+    © 2025 STEMSphere Academy. All rights reserved.
   </footer>
 </body>
 </html>
