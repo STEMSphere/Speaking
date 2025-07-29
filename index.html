@@ -39,19 +39,6 @@
       margin-top: 0.8em;
     }
 
-    @media (max-width: 600px) {
-      .title-group span {
-        font-size: 1.8em;
-      }
-      h2 {
-        font-size: 1.2em;
-      }
-      p {
-        font-size: 1.1em;
-        line-height: 1.6em;
-      }
-    }
-
     main {
       max-width: 850px;
       margin: auto;
@@ -107,16 +94,27 @@
 
     .arrow-up {
       font-size: 2.2em;
-      color: #39ff14; /* Neon green */
-      text-shadow: 0 0 6px #39ff14;
-      line-height: 1;
+      color: #FFA500; /* Fluorescent macaroni orange */
+      text-shadow: 0 0 6px #ffcc66;
+      letter-spacing: 0.5em;
+      animation: gentleBounce 1.8s ease-in-out infinite;
       margin: 0.3em 0 0;
     }
 
+    @keyframes gentleBounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-4px);
+      }
+    }
+
     .access-message {
-      font-size: 1.3em;
-      font-weight: bold;
+      font-size: 1.35em;
+      font-weight: 700;
       color: #ffffff;
+      font-family: 'Segoe UI Semibold', sans-serif;
       margin-top: 0.3em;
     }
 
@@ -133,6 +131,24 @@
       color: #bbb;
       padding: 2em 1em;
       border-top: 1px solid #333;
+    }
+
+    @media (max-width: 600px) {
+      .title-group span {
+        font-size: 1.8em;
+      }
+      h2 {
+        font-size: 1.2em;
+      }
+      .access-message {
+        font-size: 1.2em;
+      }
+      .arrow-up {
+        font-size: 1.8em;
+      }
+      .video-message {
+        font-size: 1.05em;
+      }
     }
   </style>
 </head>
@@ -153,7 +169,7 @@
       </div>
     </div>
 
-    <div class="arrow-up">↑↑↑↑↑↑↑</div>
+    <div class="arrow-up">↑↑↑↑</div>
     <div class="access-message">Watch Video for Access details</div>
     <p class="video-message">Our students don’t just memorize. They perform, present, and speak with pride.</p>
   </main>
