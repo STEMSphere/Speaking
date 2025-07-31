@@ -323,9 +323,9 @@
 
       <button class="sign-up-btn"
               onclick="window.location='https://www.stemsphere.academy/products/courses/public-speaking'">
-        Sign Up Now
+        Start Now
       </button>
-      <button class="schedule-btn">Schedule Now</button>
+      <button class="schedule-btn">Schedule</button>
     </div>
 
     <div class="arrow-up">↑↑↑↑</div>
@@ -348,13 +348,13 @@
     document.head.appendChild(tag);
 
     let player, checkInterval;
-    const milestones = { form: 136, signUp: 212, schedule: 214 };
+    const milestones = { form: 124, signUp: 201, schedule: 204 };
     const shown = { form: false, signUp: false, schedule: false };
 
     function onYouTubeIframeAPIReady() {
       player = new YT.Player('player', {
         host: 'https://www.youtube-nocookie.com',
-        videoId: 'O0FWEKTiZCc',
+        videoId: 'hjd_q_H6UW0',
         playerVars: {
           controls: 0,
           disablekb: 1,
@@ -420,10 +420,10 @@
       player.playVideo();
     });
 
-    // “Schedule Now” → Calendly popup
+    // “Schedule” → Calendly popup
     document.querySelector('.schedule-btn').addEventListener('click', () => {
       Calendly.initPopupWidget({
-        url: 'https://calendly.com/your-calendly-link'
+        url: 'https://calendly.com/stemxsphere/trialclass'
       });
     });
   </script>
