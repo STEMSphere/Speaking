@@ -297,7 +297,7 @@
       <span>Speak with Confidence.</span>
     </div>
     <h2>Speak Confidently → Improve Daily → Succeed Everywhere</h2>
-    <div class="pill-bar">Speaking Confidently | Kids Classes | Adult Classes</div>
+    <div class="pill-bar">Speak Confidently| Kids Classes| Adult Classes</div>
   </header>
 
   <main>
@@ -325,7 +325,7 @@
               onclick="window.location='https://www.stemsphere.academy/products/courses/public-speaking'">
         Start Now
       </button>
-      <button class="schedule-btn">Schedule</button>
+      <button class="schedule-btn">Schedule Now</button>
     </div>
 
     <div class="arrow-up">↑↑↑↑</div>
@@ -348,6 +348,7 @@
     document.head.appendChild(tag);
 
     let player, checkInterval;
+    // form popup now at 2:04 (124 seconds)
     const milestones = { form: 124, signUp: 201, schedule: 204 };
     const shown = { form: false, signUp: false, schedule: false };
 
@@ -420,7 +421,7 @@
       player.playVideo();
     });
 
-    // “Schedule” → Calendly popup
+    // “Schedule Now” → Calendly popup
     document.querySelector('.schedule-btn').addEventListener('click', () => {
       Calendly.initPopupWidget({
         url: 'https://calendly.com/stemxsphere/trialclass'
