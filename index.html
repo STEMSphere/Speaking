@@ -9,7 +9,9 @@
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
 
   <style>
-    /* ────────── Global & Existing Styles (unchanged) ────────── */
+    /* ──────────────────────────────────────────────────────────────────
+       Global & Existing Styles (unchanged except subheader color/size)
+    ────────────────────────────────────────────────────────────────── */
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
@@ -34,9 +36,10 @@
       line-height: 1.1em;
     }
     h2 {
-      font-size: 1.4em;
-      color: #ccc;
+      font-size: 1.2em;
+      color: #fff;
       margin: 0.6em 0 0.4em;
+      white-space: nowrap;
     }
     .pill-bar {
       display: inline-flex;
@@ -109,7 +112,9 @@
       border-top: 1px solid #333;
     }
 
-    /* ────────── Masked Video Styles ────────── */
+    /* ──────────────────────────────────────────────────────────────────
+       Masked Video Styles
+    ────────────────────────────────────────────────────────────────── */
     .video-container {
       position: relative;
       padding-bottom: 56.25%;
@@ -171,7 +176,9 @@
       cursor: pointer;
     }
 
-    /* ────────── Popup Form & CTA Buttons ────────── */
+    /* ──────────────────────────────────────────────────────────────────
+       Popup Form & CTA Buttons
+    ────────────────────────────────────────────────────────────────── */
     #popup-form {
       display: none;
       position: absolute;
@@ -223,17 +230,19 @@
       padding: 0.8em 1.2em;
       border: none;
       border-radius: 4px;
-      background: #FFDD00;
+      background: #00FF00;
       color: #000;
       font-weight: 700;
-      box-shadow: 0 0 8px rgba(255, 221, 0, 0.7);
+      box-shadow: 0 0 8px rgba(0,255,0,0.7);
       cursor: pointer;
       z-index: 900;
     }
     .sign-up-btn { left: 10%; }
     .schedule-btn { right: 10%; }
 
-    /* ────────── Responsive Adjustments ────────── */
+    /* ──────────────────────────────────────────────────────────────────
+       Responsive Adjustments
+    ────────────────────────────────────────────────────────────────── */
     @media (max-width: 600px) {
       .title-group span {
         font-size: 2em;
@@ -381,14 +390,14 @@
       }
     }
 
-    // Form submission: pause, hide & resume playback
+    // Form submission: hide form and resume video
     document.getElementById('leadForm').addEventListener('submit', e => {
       e.preventDefault();
       document.getElementById('popup-form').style.display = 'none';
       player.playVideo();
     });
 
-    // Schedule Now → Calendly popup
+    // “Schedule Now” → Calendly popup
     document.querySelector('.schedule-btn').addEventListener('click', () => {
       Calendly.initPopupWidget({
         url: 'https://calendly.com/your-calendly-link'
@@ -397,3 +406,4 @@
   </script>
 </body>
 </html>
+```
