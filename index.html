@@ -9,11 +9,13 @@
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
 
   <style>
-    /* —— Global & existing styles (unchanged) —— */
+    /* ----------------------------------------------------------------
+       Global Reset & Base Styles (UNCHANGED from Learn)
+    ---------------------------------------------------------------- */
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #000000;
+      background-color: #000;
       color: #fff;
       text-align: center;
     }
@@ -22,34 +24,34 @@
     }
     .title-group {
       display: inline-block;
-      line-height: 1.4em;
-      margin-bottom: 0.5em;
+      margin-bottom: 0.4em;
     }
     .title-group span {
+      display: block;
       font-size: 2.8em;
       font-weight: 700;
       color: #FFDD00;
-      display: block;
       letter-spacing: 1px;
-      line-height: 1.2em;
+      margin: 0.4em 0;
     }
     h2 {
       font-size: 1.4em;
       color: #ccc;
-      font-weight: normal;
-      margin-top: 0.8em;
-      margin-bottom: 0.4em;
+      margin-top: 0.2em;
     }
     .pill-bar {
-      display: inline-block;
-      margin-top: 0.6em;
-      background: linear-gradient(to right, #00FFFF, #FF00FF);
-      color: white;
-      font-size: 1.05em;
-      font-weight: 600;
-      padding: 0.5em 1.4em;
+      display: inline-flex;
+      align-items: center;
+      padding: 0.4em 1em;
       border-radius: 999px;
-      box-shadow: 0 0 6px rgba(255, 0, 255, 0.5);
+      background: linear-gradient(90deg, #00f8ff, #ff00d0);
+      font-weight: 700;
+      font-size: 0.95em;
+      color: #fff;
+      margin-top: 0.6em;
+    }
+    .pill-bar span + span {
+      margin-left: 0.5em;
     }
     main {
       max-width: 850px;
@@ -57,22 +59,41 @@
       padding: 2em 1em 3em;
       position: relative;
     }
+
+    /* ----------------------------------------------------------------
+       Electric Frame (UNCHANGED)
+    ---------------------------------------------------------------- */
     .electric-frame {
       position: relative;
       padding: 10px;
       border-radius: 12px;
       margin: 2em auto;
       background-color: #000;
-      box-shadow: 0 0 10px #fdf200, 0 0 16px #ffe600, 0 0 22px #fff000;
+      box-shadow:
+        0 0 10px #fdf200,
+        0 0 16px #ffe600,
+        0 0 22px #fff000;
       animation: flicker 1.5s infinite alternate;
       max-width: 800px;
     }
     @keyframes flicker {
-      0% { box-shadow: 0 0 8px #ffeb3b, 0 0 12px #fdf200, 0 0 18px #ffe600; }
-      100% { box-shadow: 0 0 12px #fdf200, 0 0 18px #fff000, 0 0 24px #ffeb3b; }
+      0% {
+        box-shadow:
+          0 0 8px #ffeb3b,
+          0 0 12px #fdf200,
+          0 0 18px #ffe600;
+      }
+      100% {
+        box-shadow:
+          0 0 12px #fdf200,
+          0 0 18px #fff000,
+          0 0 24px #ffeb3b;
+      }
     }
 
-    /* —— Masked Video Styles —— */
+    /* ----------------------------------------------------------------
+       Masked Video Styles (copied 1:1 from Learn, with YOUR video)
+    ---------------------------------------------------------------- */
     .video-container {
       position: relative;
       padding-bottom: 56.25%;
@@ -134,38 +155,51 @@
       cursor: pointer;
     }
 
-    /* —— Form Overlay & Buttons —— */
-    #formOverlay {
+    /* ----------------------------------------------------------------
+       Popup Form & Buttons (exact copy from Learn)
+    ---------------------------------------------------------------- */
+    #popup-form {
       display: none;
-      position: fixed;
+      position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.85);
-      justify-content: center;
-      align-items: center;
+      background: rgba(0,0,0,0.85);
+      color: #fff;
       z-index: 1000;
-      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1em;
     }
-    #formOverlay form {
-      background: #222;
-      padding: 2em;
-      border-radius: 8px;
-      text-align: center;
+    #popup-form h3 {
+      margin-bottom: 0.2em;
+      font-size: 1.4em;
+      font-weight: 700;
     }
-    #formOverlay input {
-      width: 100%;
-      padding: 0.8em;
+    #popup-form p {
       margin-bottom: 1em;
+      font-size: 1em;
+      color: #ccc;
+    }
+    #popup-form input {
+      width: 80%;
+      max-width: 300px;
+      padding: 0.8em;
+      margin: 0.5em 0;
       border: none;
       border-radius: 4px;
+      background: #222;
+      color: #fff;
       font-size: 1em;
     }
-    #formOverlay button {
-      padding: 0.8em 1.6em;
-      background: #FFDD00;
+    #popup-form button {
+      padding: 0.8em 1.2em;
+      margin-top: 0.5em;
       border: none;
       border-radius: 4px;
-      font-size: 1em;
+      background: #FFDD00;
+      color: #000;
+      font-weight: 700;
       cursor: pointer;
     }
     .sign-up-btn, .schedule-btn {
@@ -178,14 +212,16 @@
       background: #FFDD00;
       color: #000;
       font-weight: 700;
-      box-shadow: 0 0 8px rgba(255, 221, 0, 0.7);
+      box-shadow: 0 0 8px rgba(255,221,0,0.7);
       cursor: pointer;
       z-index: 900;
     }
     .sign-up-btn { left: 10%; }
     .schedule-btn { right: 10%; }
 
-    /* —— Rest of existing styles —— */
+    /* ----------------------------------------------------------------
+       Remaining Learn styles (UNCHANGED)
+    ---------------------------------------------------------------- */
     .arrow-up {
       font-size: 2.2em;
       color: #FFA500;
@@ -196,16 +232,30 @@
     .access-message {
       font-size: 1.35em;
       font-weight: 700;
-      color: #ffffff;
       font-family: 'Segoe UI Semibold', sans-serif;
       margin-top: 0.3em;
     }
-    .video-message {
-      font-size: 1.15em;
-      color: #ccc;
-      line-height: 1.6em;
-      padding: 0 1em;
-      margin-top: 1.2em;
+    #calendly-popup {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.85);
+      z-index: 1500;
+      align-items: center;
+      justify-content: center;
+    }
+    #calendly-popup .calendly-inline-widget {
+      width: 320px; height: 580px; border: none;
+    }
+    #calendly-popup .close-cal {
+      margin-top: 1em;
+      padding: 0.5em 1em;
+      background: #FFDD00;
+      color: #000;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
     }
     footer {
       font-size: 0.85em;
@@ -214,17 +264,17 @@
       border-top: 1px solid #333;
     }
     @media (max-width: 600px) {
-      .title-group span { font-size: 1.8em; }
+      .title-group span { font-size: 2em; }
       h2 { font-size: 1.2em; }
-      .pill-bar { font-size: 0.95em; padding: 0.4em 1.2em; }
-      .access-message { font-size: 1.2em; }
       .arrow-up { font-size: 1.8em; }
-      .video-message { font-size: 1.05em; }
-      #formOverlay input, #formOverlay button { width: 90%; font-size: 0.9em; }
+      .access-message { font-size: 1.2em; }
+      #popup-form input, #popup-form button { width: 90%; font-size: 0.9em; }
       .sign-up-btn, .schedule-btn { bottom: 10%; font-size: 0.9em; }
+      #calendly-popup .calendly-inline-widget { width: 90%; height: 400px; }
     }
   </style>
 </head>
+
 <body>
   <header>
     <div class="title-group">
@@ -232,7 +282,9 @@
       <span>Speak with Confidence.</span>
     </div>
     <h2>Speak Confidently → Improve Daily → Succeed Everywhere</h2>
-    <div class="pill-bar">Speak English Confidently</div>
+    <div class="pill-bar">
+      <span>Speak English Confidently</span>
+    </div>
   </header>
 
   <main>
@@ -246,44 +298,57 @@
         </div>
       </div>
 
-      <div id="formOverlay">
-        <form id="accessForm">
-          <input
-            type="email"
-            id="emailInput"
-            placeholder="Enter your email to get access"
-            required
-          />
-          <button type="submit">Get Access</button>
+      <div id="popup-form">
+        <h3>Want to continue watching the video?</h3>
+        <p>Enter your details below:</p>
+        <form id="leadForm"
+              method="POST"
+              action="https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec">
+          <input type="text"  name="name"  placeholder="Your Name"  required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <button type="submit">Submit & Continue</button>
         </form>
       </div>
 
-      <button class="sign-up-btn">Start Now</button>
+      <button class="sign-up-btn"
+              onclick="window.location='https://www.stemsphere.academy/products/courses/public-speaking'">
+        Sign Up Now
+      </button>
       <button class="schedule-btn">Schedule Now</button>
     </div>
 
     <div class="arrow-up">↑↑↑↑</div>
-    <div class="access-message">Watch Video for Access details</div>
-    <p class="video-message">
-      Our students don’t just memorize. They perform, present, and speak with pride.
-    </p>
+    <div class="access-message">Watch Video for Access Details</div>
   </main>
+
+  <div id="calendly-popup">
+    <div class="calendly-inline-widget"
+         data-url="https://calendly.com/stemxsphere/trialclass">
+    </div>
+    <button class="close-cal">Close</button>
+  </div>
 
   <footer>
     © 2025 STEMSphere Academy. All rights reserved.
   </footer>
 
-  <!-- Calendly & YouTube IFrame API + control logic -->
+  <!-- Calendly widget script -->
   <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+  <!-- YouTube IFrame API + control logic (copied 1:1 from Learn, with your video/times) -->
   <script>
-    // Load YouTube IFrame API
+    // load YouTube IFrame API
     const tag = document.createElement('script');
     tag.src = "https://www.youtube.com/iframe_api";
     document.head.appendChild(tag);
 
-    let player, intervalId;
-    const flags = { form: false, start: false, schedule: false };
-    const formTime = 136, startTime = 212, scheduleTime = 214;
+    let player,
+        started  = false,
+        pauseTime = 136,  // 2:16
+        signUpTime = 212, // 3:32
+        scheduleTime = 214, // 3:34
+        intervalId,
+        flags = { form: false, signUp: false, schedule: false };
 
     function onYouTubeIframeAPIReady() {
       player = new YT.Player('player', {
@@ -292,6 +357,7 @@
         playerVars: {
           controls: 0,
           disablekb: 1,
+          fs: 0,
           modestbranding: 1,
           rel: 0,
           iv_load_policy: 3,
@@ -307,32 +373,35 @@
 
     function onPlayerReady() {
       const placeholder = document.getElementById('placeholder');
-      const playBtn = document.getElementById('playBtn');
-      const clickOv = document.querySelector('.click-overlay');
+      const playBtn     = document.getElementById('playBtn');
+      const clickOv     = document.querySelector('.click-overlay');
       clickOv.addEventListener('click', () => {
-        if (player.getPlayerState() !== YT.PlayerState.PLAYING) {
+        if (!started) {
+          started = true;
           placeholder.style.display = 'none';
-          playBtn.style.display = 'none';
+          playBtn.style.display     = 'none';
           document.getElementById('player').style.display = 'block';
           player.playVideo();
-        } else {
+        } else if (player.getPlayerState() === YT.PlayerState.PLAYING) {
           player.pauseVideo();
+        } else {
+          player.playVideo();
         }
       });
     }
 
     function onPlayerStateChange(event) {
       const placeholder = document.getElementById('placeholder');
-      const playBtn = document.getElementById('playBtn');
+      const playBtn     = document.getElementById('playBtn');
 
       if (event.data === YT.PlayerState.PLAYING) {
         placeholder.style.display = 'none';
-        playBtn.style.display = 'none';
+        playBtn.style.display     = 'none';
         intervalId = setInterval(checkMilestones, 500);
 
       } else if (event.data === YT.PlayerState.PAUSED) {
         placeholder.style.display = 'block';
-        playBtn.style.display = 'flex';
+        playBtn.style.display     = 'flex';
         clearInterval(intervalId);
 
       } else if (event.data === YT.PlayerState.ENDED) {
@@ -342,12 +411,13 @@
 
     function checkMilestones() {
       const t = player.getCurrentTime();
-      if (t >= formTime && !flags.form) {
+
+      if (t >= pauseTime && !flags.form) {
         flags.form = true;
-        document.getElementById('formOverlay').style.display = 'flex';
+        document.getElementById('popup-form').style.display = 'flex';
       }
-      if (t >= startTime && !flags.start) {
-        flags.start = true;
+      if (t >= signUpTime && !flags.signUp) {
+        flags.signUp = true;
         document.querySelector('.sign-up-btn').style.display = 'block';
       }
       if (t >= scheduleTime && !flags.schedule) {
@@ -356,23 +426,15 @@
       }
     }
 
-    // Form submission → redirect
-    document.getElementById('accessForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      window.location.href = 'https://www.stemsphere.academy/products/courses/public-speaking';
-    });
+    // Schedule button → open inline Calendly popup
+    document.querySelector('.schedule-btn').onclick = () => {
+      document.getElementById('calendly-popup').style.display = 'flex';
+    };
 
-    // “Start Now” button → redirect
-    document.querySelector('.sign-up-btn').addEventListener('click', function() {
-      window.location.href = 'https://www.stemsphere.academy/products/courses/public-speaking';
-    });
-
-    // “Schedule Now” button → open Calendly
-    document.querySelector('.schedule-btn').addEventListener('click', function() {
-      Calendly.initPopupWidget({
-        url: 'https://calendly.com/your-calendly-link'  /* ← replace with your actual Calendly URL */
-      });
-    });
+    // Close inline Calendly popup
+    document.querySelector('.close-cal').onclick = () => {
+      document.getElementById('calendly-popup').style.display = 'none';
+    };
   </script>
 </body>
 </html>
